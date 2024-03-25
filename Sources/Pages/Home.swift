@@ -12,30 +12,38 @@ struct Home: StaticPage {
     var title = "Home"
 
     func body(context: PublishingContext) -> [BlockElement] {
-        Text("Welcome to ExampleSite!")
+        Text("Welcome to とんとんぼハウス!")
             .font(.title1)
 
-        Text("This site is a demonstration of a wide variety of Ignite elements and components all in one place, so you can find code samples for your own sites.")
-            .font(.lead)
+        let welcomeMessage = """
+やあ （´・ω・｀)<br>
+ようこそ、とんとんぼハウスへ。<br>
+このテキーラはサービスだから、まず飲んで落ち着いて欲しい。<br>
+<br>
+うん、「また」なんだ。済まない。<br>
+仏の顔もって言うしね、謝って許してもらおうとも思っていない。<br>
+<br>
+でも、このサイトを見たとき、君は、きっと言葉では言い表せない「Swift」みたいなものを感じてくれたと思う。<br>
+殺伐とした世の中で、そういう気持ちを忘れないで欲しい<br>
+そう思って、このサイトを作ったんだ。<br>
+<br>
+じゃあ、注文を聞こうか。<br>
+"""
+        
+        Text(welcomeMessage).font(.body)
 
         Text("Key concepts")
             .font(.title2)
 
         Text("Before you create sites yourself, you should review some key concepts that underpin how Ignite works:")
 
-//        List {
-//            Link("Grid Layout", target: GridExamples())
-//            Link("Navigation", target: NavigationExamples())
-//            Link("Content", target: ContentExamples())
-//            Link("Text", target: TextExamples())
-//            Link("Styling", target: StylingExamples())
-//        }
-//        .listStyle(.ordered(.default))
-//
-//
-//        Text("Examples")
-//            .font(.title2)
-//            .margin(.top, .large)
+        List {
+        }
+        .listStyle(.ordered(.default))
+
+        Text("Examples")
+            .font(.title2)
+            .margin(.top, .large)
 //
 //        List {
 //            Link("Accordions", target: AccordionExamples())
@@ -89,42 +97,43 @@ struct Home: StaticPage {
         }
         .columns(2)
 
+        // TODO: 追加
 //        NavigationBar {
 //            Link("About", target: About.self)
 //            Link("Articles", target: Articles.self)
 //        }
-//
-//        Carousel {
-//            Slide(background: "singapore.jpg") {
-//                Text("Example headline.")
-//                    .font(.title1)
-//
-//                Text("Some representative placeholder content for the first slide of the carousel.")
-//                    .foregroundStyle(.secondary)
-//
-//                Text {
-//                    Link("Sign up today", target: Self.self)
-//                        .linkStyle(.button)
-//                }
-//            }
-//
-//            Slide(background: "dog.jpg") {
-//                Text("Another example headline.")
-//                    .font(.title1)
-//
-//                Text("Some representative placeholder content for the first slide of the carousel.")
-//
-//                Text {
-//                    Link("Learn more", target: Self.self)
-//                        .linkStyle(.button)
-//                }
-//            }
-//        }
-//
-//        Image("singapore.jpg", description: "Singapore Changi airport")
-//            .lazy()
-//            .cornerRadius(.bottom, "20%")
-//
+
+        Carousel {
+            Slide(background: "singapore.jpg") {
+                Text("Example headline.")
+                    .font(.title1)
+
+                Text("Some representative placeholder content for the first slide of the carousel.")
+                    .foregroundStyle(.secondary)
+
+                Text {
+                    Link("Sign up Today", target: self)
+                        .linkStyle(.button)
+                }
+            }
+
+            Slide(background: "dog.jpg") {
+                Text("Another example headline.")
+                    .font(.title1)
+
+                Text("Some representative placeholder content for the first slide of the carousel.")
+
+                Text {
+                    Link("Learn more", target: self)
+                        .linkStyle(.button)
+                }
+            }
+        }
+
+        Image("singapore.jpg", description: "Singapore Changi airport")
+            .lazy()
+            .cornerRadius(.bottom, "20%")
+
 //        Accordion {
 //            Section("Section 1") {
 //                Text {
@@ -160,7 +169,7 @@ struct Home: StaticPage {
         Text {
             "Big tooltip here"
             Link("Go home", target: Home())
-//                .hint(text: "This is very important.")
+                .hint(text: "This is very important.")
         }
 
 

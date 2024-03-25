@@ -15,15 +15,15 @@ struct IgniteWebsite {
 }
 
 struct ExampleSite: Site {    
-    var name = "My Awesome Site"
-    var baseTitle = " – My Awesome Site"
+    var name = "とんとんぼ Site"
+    var baseTitle = " – とんとんぼ Site"
     var url = URL("https://www.yoursite.com")
 
     var builtInIconsEnabled = true
     var syntaxHighlighters = [SyntaxHighlighter.swift, .python, .ruby]
-    var feedConfiguration = FeedConfiguration(mode: .full, contentCount: 20, image: .init(url: "https://www.yoursite.com/images/icon32.png", width: 32, height: 32))
+//    var feedConfiguration = FeedConfiguration(mode: .full, contentCount: 20, image: .init(url: "https://www.yoursite.com/images/icon32.png", width: 32, height: 32))
 //    var robotsConfiguration = Robots()
-    var author = "Paul Hudson"
+    var author = "とんとんぼ"
 
     var homePage = Home()
     var tagPage = Tags()
