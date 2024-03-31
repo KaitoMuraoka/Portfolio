@@ -22,8 +22,13 @@ struct ExampleSite: Site {
     var language: Language = .japanese
     var builtInIconsEnabled = true
     var syntaxHighlighters = [SyntaxHighlighter.swift, .python, .ruby]
-//    var feedConfiguration = FeedConfiguration(mode: .full, contentCount: 20, image: .init(url: "https://www.yoursite.com/images/icon32.png", width: 32, height: 32))
-//    var robotsConfiguration = Robots()
+    var feedConfiguration = FeedConfiguration(
+        mode: .full,
+        contentCount: 20,
+        image: .init(url: "https://avatars.githubusercontent.com/u/70003919?v=4", width: 32, height: 32)
+    )
+    
+    var robotsConfiguration = Robots()
     var author = "とんとんぼ"
 
     var homePage = Home()

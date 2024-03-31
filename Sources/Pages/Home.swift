@@ -103,36 +103,36 @@ struct Home: StaticPage {
 //            Link("Articles", target: Articles.self)
 //        }
 
-        Carousel {
-            Slide(background: "singapore.jpg") {
-                Text("Example headline.")
-                    .font(.title1)
+//        Carousel {
+//            Slide(background: "singapore.jpg") {
+//                Text("Example headline.")
+//                    .font(.title1)
+//
+//                Text("Some representative placeholder content for the first slide of the carousel.")
+//                    .foregroundStyle(.secondary)
+//
+//                Text {
+//                    Link("Sign up Today", target: self)
+//                        .linkStyle(.button)
+//                }
+//            }
+//
+//            Slide(background: "dog.jpg") {
+//                Text("Another example headline.")
+//                    .font(.title1)
+//
+//                Text("Some representative placeholder content for the first slide of the carousel.")
+//
+//                Text {
+//                    Link("Learn more", target: self)
+//                        .linkStyle(.button)
+//                }
+//            }
+//        }
 
-                Text("Some representative placeholder content for the first slide of the carousel.")
-                    .foregroundStyle(.secondary)
-
-                Text {
-                    Link("Sign up Today", target: self)
-                        .linkStyle(.button)
-                }
-            }
-
-            Slide(background: "dog.jpg") {
-                Text("Another example headline.")
-                    .font(.title1)
-
-                Text("Some representative placeholder content for the first slide of the carousel.")
-
-                Text {
-                    Link("Learn more", target: self)
-                        .linkStyle(.button)
-                }
-            }
-        }
-
-        Image("singapore.jpg", description: "Singapore Changi airport")
-            .lazy()
-            .cornerRadius(.bottom, "20%")
+//        Image("singapore.jpg", description: "Singapore Changi airport")
+//            .lazy()
+//            .cornerRadius(.bottom, "20%")
 
 //        Accordion {
 //            Section("Section 1") {
