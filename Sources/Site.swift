@@ -19,6 +19,7 @@ struct ExampleSite: Site {
     var baseTitle = " – とんとんぼ Site"
     var url = URL("https://www.yoursite.com")
 
+    var language: Language = .japanese
     var builtInIconsEnabled = true
     var syntaxHighlighters = [SyntaxHighlighter.swift, .python, .ruby]
 //    var feedConfiguration = FeedConfiguration(mode: .full, contentCount: 20, image: .init(url: "https://www.yoursite.com/images/icon32.png", width: 32, height: 32))
