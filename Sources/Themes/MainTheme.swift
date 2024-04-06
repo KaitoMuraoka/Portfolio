@@ -17,6 +17,7 @@ struct MyTheme: Theme {
                 NavBar()
                 
                 page.body
+                    .horizontalAlignment(.center)
                 
                 //IgniteFooter() Thank you Ignite!
                 Footer()

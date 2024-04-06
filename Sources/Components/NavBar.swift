@@ -18,7 +18,7 @@ struct NavBar: Component {
 //            Link("Project", target: "#")
 
             Link("Created Product", target: ProductContent())
-            Link("GitHub", target: "https://twitter.com/Ktombow1110")
+            Link("GitHub", target: "https://github.com/KaitoMuraoka")
             Link("X(Twitter)", target: "https://twitter.com/Ktombow1110")
         }
         .navigationItemAlignment(.trailing)

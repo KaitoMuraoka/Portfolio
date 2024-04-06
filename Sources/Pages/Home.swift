@@ -95,7 +95,6 @@ struct Home: StaticPage {
             Image("/images/tonfly.png", description: "This is My Icon!")
                 .frame(maxWidth: 400)
                 .horizontalAlignment(.center)
-                .padding([.leading, .trailing], 20)
 
             Group {
                 Text("Hi There 👋")
@@ -117,12 +116,12 @@ struct Home: StaticPage {
                             .role(.secondary)
                             .margin(10)
                         
-                        Link("GitHub", target: "https://twitter.com/Ktombow1110")
+                        Link("GitHub", target: "https://github.com/KaitoMuraoka")
                             .linkStyle(.button)
                             .role(.secondary)
                             .margin(10)
 
-                        Link("Qiita", target: "https://twitter.com/Ktombow1110")
+                        Link("Qiita", target: "https://qiita.com/KaitoMuraoka")
                             .linkStyle(.button)
                             .role(.secondary)
                             .margin(10)
@@ -132,10 +131,9 @@ struct Home: StaticPage {
                 .horizontalAlignment(.center)
             }
             .horizontalAlignment(.center)
-            .padding(.leading, 20)
         }
     }
-    
+
     private func showAboutMeSection() -> BlockElement{
         Group {
             Text("About me")
@@ -174,7 +172,9 @@ struct Home: StaticPage {
                     Text("社内勉強会の提案・企画・運営")
                     Text("技術イベント(LT会も含む)の登壇")
                 } header: { "Other Skill" }.horizontalAlignment(.center)
-            }.columns(2)
+            }
+            .horizontalAlignment(.center)
+            .columns(2)
         }
     }
 }
