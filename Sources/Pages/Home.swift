@@ -9,7 +9,7 @@ import Foundation
 import Ignite
 
 struct Home: StaticPage {
-    var title = "Home"
+    var title = "とんとんぼ's Portfolio"
 
     func body(context: PublishingContext) -> [BlockElement] {
 //        Text("Welcome to とんとんぼハウス!")
@@ -93,7 +93,7 @@ struct Home: StaticPage {
                     .font(.lead)
 
                 Text {
-                    Link("Go Product Page", target: "/product")
+                    Link("Go Product Page", target: ProductContent())
                         .linkStyle(.button)
                 }
             }

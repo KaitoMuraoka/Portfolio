@@ -12,13 +12,14 @@ struct MyTheme: Theme {
     func render(page: Page, context: PublishingContext) -> HTML {
         HTML {
             Head(for: page, in: context)
-
+            
             Body {
                 NavBar()
-
+                
                 page.body
-
-                IgniteFooter()
+                
+                //IgniteFooter() Thank you Ignite!
+                Footer()
             }
             .padding(.vertical, 80)
         }

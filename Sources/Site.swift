@@ -30,12 +30,12 @@ struct ExampleSite: Site {
     
     var robotsConfiguration = Robots()
     var author = "とんとんぼ"
-
     var homePage = Home()
     var tagPage = Tags()
     var theme = MyTheme()
 
-//    var pages: [any StaticPage] {
+    var pages: [any StaticPage] {
+        ProductContent()
 //        ContentExamples()
 //        GridExamples()
 //        NavigationExamples()
@@ -56,7 +56,7 @@ struct ExampleSite: Site {
 //        QuoteExamples()
 //        StylingExamples()
 //        TableExamples()
-//    }
+    }
 
     var layouts: [any ContentPage] {
         Story()

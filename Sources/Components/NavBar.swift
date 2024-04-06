@@ -13,14 +13,13 @@ struct NavBar: Component {
     func body(context: PublishingContext) -> [any PageElement] {
         NavigationBar(logo: Text("Hello, Swift").font(.title1)) {
 
-            Link("About", target: "#")
-            Link("Experiense", target: "#")
-            Link("Project", target: "#")
+//            Link("About", target: "#")
+//            Link("Experiense", target: "#")
+//            Link("Project", target: "#")
 
-//            Dropdown("とんとんぼ's SNS") {
-//                Link("GitHub", target: "https://twitter.com/Ktombow1110")
-//                Link("X(Twitter)", target: "https://twitter.com/Ktombow1110")
-//            }
+            Link("Created Product", target: ProductContent())
+            Link("GitHub", target: "https://twitter.com/Ktombow1110")
+            Link("X(Twitter)", target: "https://twitter.com/Ktombow1110")
         }
         .navigationItemAlignment(.trailing)
         .backgroundColor(.white)
