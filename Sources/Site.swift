@@ -36,26 +36,6 @@ struct ExampleSite: Site {
 
     var pages: [any StaticPage] {
         ProductContent()
-//        ContentExamples()
-//        GridExamples()
-//        NavigationExamples()
-//        TextExamples()
-//
-//        AccordionExamples()
-//        AlertExamples()
-//        BadgeExamples()
-//        CardExamples()
-//        CarouselExamples()
-//        CodeExamples()
-//        DropdownExamples()
-//        EmbedExamples()
-//        ImageExamples()
-//        IncludeExamples()
-//        LinkExamples()
-//        ListExamples()
-//        QuoteExamples()
-//        StylingExamples()
-//        TableExamples()
     }
 
     var layouts: [any ContentPage] {

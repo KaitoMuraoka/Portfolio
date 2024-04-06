@@ -12,8 +12,8 @@ struct Story: ContentPage {
     func body(content: Content, context: PublishingContext) -> [any BlockElement] {
         Text(content.title)
             .font(.title1)
-
-        Text("This is a subtitle.")
+        
+        Text("Reading minutes: \(content.estimatedReadingMinutes) min")
 
         if let image = content.image {
             Text {
@@ -25,18 +25,15 @@ struct Story: ContentPage {
             .horizontalAlignment(.center)
         }
 
+        Text(content.body)
+        
+        
         if content.hasTags {
-            Group {
-                Text("Tagged with: \(content.tags.joined(separator: ", "))")
-
+            Card {
                 Text("Date: \(content.date)")
-
                 Text("Words: \(content.estimatedWordCount)")
-
-                Text("Reading minutes: \(content.estimatedReadingMinutes)")
             }
         }
 
-        Text(content.body)
     }
 }

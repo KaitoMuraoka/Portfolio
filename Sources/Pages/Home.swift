@@ -30,6 +30,7 @@ struct Home: StaticPage {
 //じゃあ、注文を聞こうか。<br>
 //"""
 //        Text(welcomeMessage).font(.body)
+        
         showTopSection()
             .horizontalAlignment(.center)
             .padding(.top, 264)
@@ -37,46 +38,6 @@ struct Home: StaticPage {
         showAboutMeSection()
             .horizontalAlignment(.center)
             .padding(.top, 264)
-        
-        // TODO: 検討中
-//        Text("Experiense")
-//            .font(.title1)
-//            .horizontalAlignment(.center)
-//            .padding(.bottom, 20)
-//            .padding(.top, 264)
-//        
-//        Carousel {
-//            Slide(background: "/images/photos/stack.jpg") {
-//                Text("This is serious.")
-//                    .font(.title2)
-//
-//                Text("This is important information about the first slide.")
-//                    .font(.lead)
-//
-//                Text {
-//                    Link("Go Home", target: "/")
-//                        .linkStyle(.button)
-//                }
-//            }
-//            .backgroundOpacity(0.2)
-//
-//            Slide(background: "/images/photos/wind.jpg") {
-//                Text("Another great point.")
-//                    .font(.title2)
-//
-//                Text("This is a really convincing point to drive home how awesome carousels are.")
-//                    .font(.lead)
-//            }
-//            .backgroundOpacity(0.2)
-//
-//            Slide(background: "/images/photos/washing.jpg") {
-//                Text(markdown: "One more. *Boom*.")
-//                    .font(.title2)
-//
-//                Text("Slides, images, text – these aren't three separate things. Are you getting it?")
-//            }
-//            .backgroundOpacity(0.2)
-//        }
 
         Text("Contents")
             .font(.title1)
@@ -127,117 +88,6 @@ struct Home: StaticPage {
             }
             .backgroundOpacity(0.2)
         }
-
-//
-//        List {
-//            Link("Accordions", target: AccordionExamples())
-//            Link("Alerts", target: AlertExamples())
-//            Link("Badges", target: BadgeExamples())
-//            Link("Buttons", target: ButtonExamples())
-//            Link("Cards", target: CardExamples())
-//            Link("Carousels", target: CarouselExamples())
-//            Link("Code", target: CodeExamples())
-//            Link("Dropdowns", target: DropdownExamples())
-//            Link("Embeds", target: EmbedExamples())
-//            Link("Images", target: ImageExamples())
-//            Link("Includes", target: IncludeExamples())
-//            Link("Links", target: LinkExamples())
-//            Link("Lists", target: ListExamples())
-//            Link("Quotes", target: QuoteExamples())
-//            Link("Tables", target: TableExamples())
-//        }
-//        .listStyle(.unordered(.default))
-
-        // TODO: 追加
-//        NavigationBar {
-//            Link("About", target: About.self)
-//            Link("Articles", target: Articles.self)
-//        }
-
-//        Carousel {
-//            Slide(background: "singapore.jpg") {
-//                Text("Example headline.")
-//                    .font(.title1)
-//
-//                Text("Some representative placeholder content for the first slide of the carousel.")
-//                    .foregroundStyle(.secondary)
-//
-//                Text {
-//                    Link("Sign up Today", target: self)
-//                        .linkStyle(.button)
-//                }
-//            }
-//
-//            Slide(background: "dog.jpg") {
-//                Text("Another example headline.")
-//                    .font(.title1)
-//
-//                Text("Some representative placeholder content for the first slide of the carousel.")
-//
-//                Text {
-//                    Link("Learn more", target: self)
-//                        .linkStyle(.button)
-//                }
-//            }
-//        }
-
-//        Image("singapore.jpg", description: "Singapore Changi airport")
-//            .lazy()
-//            .cornerRadius(.bottom, "20%")
-
-//        Accordion {
-//            Section("Section 1") {
-//                Text {
-//                    "This is some important text."
-//                    Link("Click Me", target: About.self)
-//                }
-//            }
-//
-//            Section("Section 2") {
-//                Text {
-//                    "This is more important text."
-//                    Link("Click Me", target: About.self)
-//                }
-//            }
-//
-//            Section("Section 3") {
-//                Text {
-//                    "This is even more important text."
-//                    Link("Click Me", target: About.self)
-//                }
-//            }
-//        }
-//        .openMode(.all)
-//
-//        Section {
-//            Quote {
-//                Text("This is an important quote.")
-//            }
-//            .width(3)
-//
-//        }
-//
-//        Text {
-//            "Big tooltip here"
-//            Link("Go home", target: Home())
-//                .hint(text: "This is very important.")
-//        }
-//
-
-//        Alert {
-//            "A simple primary alert—check it out!"
-//        }
-//        .role(.danger)
-//
-
-//
-//        Row {
-//            Embed(url: URL(string: "https://www.youtube.com/live/n4SCMC25BxY?feature=shared")!, title: "My Video")
-//                .embedType(.youTube)
-//                .width(12)
-//        }
-//
-//        Include("important.html")
     }
     
     private func showTopSection() -> BlockElement {
