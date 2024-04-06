@@ -12,25 +12,33 @@ struct Home: StaticPage {
     var title = "Home"
 
     func body(context: PublishingContext) -> [BlockElement] {
-        Text("Welcome to とんとんぼハウス!")
-            .font(.title1)
+//        Text("Welcome to とんとんぼハウス!")
+//            .font(.title1)
 
-        let welcomeMessage = """
-やあ （´・ω・｀)<br>
-ようこそ、とんとんぼハウスへ。<br>
-このテキーラはサービスだから、まず飲んで落ち着いて欲しい。<br>
-<br>
-うん、「また」なんだ。済まない。<br>
-仏の顔もって言うしね、謝って許してもらおうとも思っていない。<br>
-<br>
-でも、このサイトを見たとき、君は、きっと言葉では言い表せない「Swift」みたいなものを感じてくれたと思う。<br>
-殺伐とした世の中で、そういう気持ちを忘れないで欲しい<br>
-そう思って、このサイトを作ったんだ。<br>
-<br>
-じゃあ、注文を聞こうか。<br>
-"""
+//        let welcomeMessage = """
+//やあ （´・ω・｀)<br>
+//ようこそ、とんとんぼハウスへ。<br>
+//このテキーラはサービスだから、まず飲んで落ち着いて欲しい。<br>
+//<br>
+//うん、「また」なんだ。済まない。<br>
+//仏の顔もって言うしね、謝って許してもらおうとも思っていない。<br>
+//<br>
+//でも、このサイトを見たとき、君は、きっと言葉では言い表せない「Swift」みたいなものを感じてくれたと思う。<br>
+//殺伐とした世の中で、そういう気持ちを忘れないで欲しい<br>
+//そう思って、このサイトを作ったんだ。<br>
+//<br>
+//じゃあ、注文を聞こうか。<br>
+//"""
+//        Text(welcomeMessage).font(.body)
+        topSection(context)
+            .horizontalAlignment(.center)
+            .padding(.top, 132)
         
-        Text(welcomeMessage).font(.body)
+        
+        Text("About me")
+            .font(.title1)
+            .horizontalAlignment(.center)
+            .padding(.top)
 
         Text("Key concepts")
             .font(.title2)
@@ -187,5 +195,51 @@ struct Home: StaticPage {
 //        }
 //
 //        Include("important.html")
+    }
+    
+    private func topSection(_ context: PublishingContext) -> BlockElement {
+        Section {
+            Image("/images/tonfly.png", description: "This is My Icon!")
+                .frame(maxWidth: 400)
+                .horizontalAlignment(.center)
+                .padding([.leading, .trailing], 20)
+
+            Group {
+                Text("Hi There 👋")
+                    .font(.title1)
+                    .padding(.bottom, .large)
+                
+                Text("I'm とんとんぼ")
+                    .font(.title1)
+                    .padding(.bottom, .large)
+
+                Text("iOS Developer")
+                    .font(.title1)
+                
+                Section {
+                    Text{
+                        // TODO: 辞書配列で管理
+                        Link("X(Twitter)", target: "https://twitter.com/Ktombow1110")
+                            .linkStyle(.button)
+                            .role(.secondary)
+                            .margin(10)
+                        
+                        Link("GitHub", target: "https://twitter.com/Ktombow1110")
+                            .linkStyle(.button)
+                            .role(.secondary)
+                            .margin(10)
+
+                        Link("Qiita", target: "https://twitter.com/Ktombow1110")
+                            .linkStyle(.button)
+                            .role(.secondary)
+                            .margin(10)
+                    }
+                    .horizontalAlignment(.center)
+                }
+                .horizontalAlignment(.center)
+            }
+            .horizontalAlignment(.center)
+            .padding(.leading, 20)
+        }
     }
 }

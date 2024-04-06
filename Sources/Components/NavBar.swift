@@ -12,18 +12,18 @@ import Ignite
 struct NavBar: Component {
     func body(context: PublishingContext) -> [any PageElement] {
         NavigationBar(logo: Text("Hello, Swift").font(.title1)) {
-            Link("Table of Contents", target: "/")
 
-            Link("Ignite on GitHub", target: "https://github.com/twostraws/Ignite")
+            Link("About", target: "#")
+            Link("Experiense", target: "#")
+            Link("Project", target: "#")
 
-            Dropdown("とんとんぼ's SNS") {
-                Link("GitHub", target: "https://twitter.com/Ktombow1110")
-                Link("X(Twitter)", target: "https://twitter.com/Ktombow1110")
-            }
+//            Dropdown("とんとんぼ's SNS") {
+//                Link("GitHub", target: "https://twitter.com/Ktombow1110")
+//                Link("X(Twitter)", target: "https://twitter.com/Ktombow1110")
+//            }
         }
         .navigationItemAlignment(.trailing)
-        .navigationBarStyle(.dark)
-        .backgroundColor(.firebrick)
+        .backgroundColor(.white)
         .position(.fixedTop)
     }
 }
