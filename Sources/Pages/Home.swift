@@ -30,28 +30,16 @@ struct Home: StaticPage {
 //じゃあ、注文を聞こうか。<br>
 //"""
 //        Text(welcomeMessage).font(.body)
-        topSection(context)
+        showTopSection()
             .horizontalAlignment(.center)
-            .padding(.top, 132)
+            .padding(.top, 264)
         
-        
-        Text("About me")
-            .font(.title1)
+        showAboutMeSection()
             .horizontalAlignment(.center)
-            .padding(.top)
+            .padding(.top, 264)
+        
+        Text("Contents")
 
-        Text("Key concepts")
-            .font(.title2)
-
-        Text("Before you create sites yourself, you should review some key concepts that underpin how Ignite works:")
-
-        List {
-        }
-        .listStyle(.ordered(.default))
-
-        Text("Examples")
-            .font(.title2)
-            .margin(.top, .large)
 //
 //        List {
 //            Link("Accordions", target: AccordionExamples())
@@ -71,39 +59,6 @@ struct Home: StaticPage {
 //            Link("Tables", target: TableExamples())
 //        }
 //        .listStyle(.unordered(.default))
-
-        Dropdown("Click Me") {
-            Text("Header")
-            Link("Clickedy 1", target: Home())
-                .role(.dark)
-            Divider()
-            Link("Clickedy 2", target: Home())
-            Link("Clickedy 3", target: Home())
-        }
-        .role(.danger)
-        .class("sticky-top")
-
-        ButtonGroup(accessibilityLabel: "Important buttons") {
-            Button("Yay")
-                .role(.primary)
-            Button("Woo")
-                .role(.primary)
-            Button("Woot")
-                .role(.primary)
-        }
-
-
-        Text(markdown: "This is a *very* important ***piece*** of text.")
-            .foregroundStyle(Color(hex: "#ffe700"))
-            .backgroundColor("#dcdcdc")
-            .innerShadow(.black, radius: 5)
-
-        Section {
-            for content in context.allContent.sorted(by: \.date, order: .reverse).prefix(3) {
-                ContentPreview(for: content)
-            }
-        }
-        .columns(2)
 
         // TODO: 追加
 //        NavigationBar {
@@ -166,20 +121,20 @@ struct Home: StaticPage {
 //        }
 //        .openMode(.all)
 //
-        Section {
-            Quote {
-                Text("This is an important quote.")
-            }
-            .width(3)
-
-        }
-
-        Text {
-            "Big tooltip here"
-            Link("Go home", target: Home())
-                .hint(text: "This is very important.")
-        }
-
+//        Section {
+//            Quote {
+//                Text("This is an important quote.")
+//            }
+//            .width(3)
+//
+//        }
+//
+//        Text {
+//            "Big tooltip here"
+//            Link("Go home", target: Home())
+//                .hint(text: "This is very important.")
+//        }
+//
 
 //        Alert {
 //            "A simple primary alert—check it out!"
@@ -197,7 +152,7 @@ struct Home: StaticPage {
 //        Include("important.html")
     }
     
-    private func topSection(_ context: PublishingContext) -> BlockElement {
+    private func showTopSection() -> BlockElement {
         Section {
             Image("/images/tonfly.png", description: "This is My Icon!")
                 .frame(maxWidth: 400)
@@ -240,6 +195,45 @@ struct Home: StaticPage {
             }
             .horizontalAlignment(.center)
             .padding(.leading, 20)
+        }
+    }
+    
+    private func showAboutMeSection() -> BlockElement{
+        Group {
+            Text("About me")
+                .font(.title1)
+                .horizontalAlignment(.center)
+
+            Section {
+                Card {
+                    Text("I live in Minato-ku, Tokyo🗼")
+                    Text("From Chigasaki, Kanagawa🌊")
+                    Text("🎓Department of Physics, Faculty of Science, Tokai University <br> (東海大学 理学部 物理学科)")
+                    Text("")
+                } header: { "Basic Info" }.horizontalAlignment(.center)
+
+                Card {
+                    Text("Swift: 2023/4 - Current")
+                    Text("Kotlin: 2023/4 - Current")
+                    Text("Java: 2023/4 - Current")
+                } header: { "Programing Language Skill" }.horizontalAlignment(.center)
+
+                Card {
+                    Text("Xcode, CocoaPods, Carthage, Swift Package Manager")
+                    Text("Firebase(Hosting, Crashlytics, RemoteConfig)")
+                    Text("AndroidStudio, Android View")
+                } header: {
+                    "Tool Skill"
+                }.horizontalAlignment(.center)
+                
+                Card {
+                    Text("iOS 新卒研修・教育")
+                    Text("社内イベントの提案・企画・運営")
+                    Text("技術イベント(LT会も含む)の登壇")
+                } header: {
+                    "Other Skill"
+                }.horizontalAlignment(.center)
+            }.columns(2)
         }
     }
 }
