@@ -88,13 +88,13 @@ struct Home: StaticPage {
             }
             .backgroundOpacity(0.2)
         }
+        .horizontalAlignment(.center)
     }
     
     private func showTopSection() -> BlockElement {
         Section {
             Image("/images/tonfly.png", description: "This is My Icon!")
-                .frame(maxWidth: 400)
-                .horizontalAlignment(.center)
+                .frame(width: 350)
 
             Group {
                 Text("Hi There 👋")
@@ -126,11 +126,8 @@ struct Home: StaticPage {
                             .role(.secondary)
                             .margin(10)
                     }
-                    .horizontalAlignment(.center)
                 }
-                .horizontalAlignment(.center)
             }
-            .horizontalAlignment(.center)
         }
     }
 
