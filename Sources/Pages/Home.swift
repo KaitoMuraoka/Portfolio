@@ -38,7 +38,95 @@ struct Home: StaticPage {
             .horizontalAlignment(.center)
             .padding(.top, 264)
         
+        // TODO: 検討中
+//        Text("Experiense")
+//            .font(.title1)
+//            .horizontalAlignment(.center)
+//            .padding(.bottom, 20)
+//            .padding(.top, 264)
+//        
+//        Carousel {
+//            Slide(background: "/images/photos/stack.jpg") {
+//                Text("This is serious.")
+//                    .font(.title2)
+//
+//                Text("This is important information about the first slide.")
+//                    .font(.lead)
+//
+//                Text {
+//                    Link("Go Home", target: "/")
+//                        .linkStyle(.button)
+//                }
+//            }
+//            .backgroundOpacity(0.2)
+//
+//            Slide(background: "/images/photos/wind.jpg") {
+//                Text("Another great point.")
+//                    .font(.title2)
+//
+//                Text("This is a really convincing point to drive home how awesome carousels are.")
+//                    .font(.lead)
+//            }
+//            .backgroundOpacity(0.2)
+//
+//            Slide(background: "/images/photos/washing.jpg") {
+//                Text(markdown: "One more. *Boom*.")
+//                    .font(.title2)
+//
+//                Text("Slides, images, text – these aren't three separate things. Are you getting it?")
+//            }
+//            .backgroundOpacity(0.2)
+//        }
+
         Text("Contents")
+            .font(.title1)
+            .horizontalAlignment(.center)
+            .padding(.bottom, 20)
+            .padding(.top, 264)
+        
+        Carousel {
+            Slide(background: "/images/SNSIcons/GitHub_Logo_White.png") {
+                Text("Product")
+                    .font(.title2)
+
+                Text("Here are some of the products I have created.<br>私が作ったプロダクトを紹介します")
+                    .font(.lead)
+
+                Text {
+                    Link("Go Product Page", target: "/product")
+                        .linkStyle(.button)
+                }
+            }
+            .backgroundOpacity(0.2)
+
+            Slide(background: "/images/SNSIcons/qiita-icon.png") {
+                Text("Qiita")
+                    .font(.title2)
+
+                Text("What I have learned is mainly posted here.<br>学んだことは主にここに投稿しています。")
+                    .font(.lead)
+
+                Text {
+                    Link("Go Qiita site", target: "https://qiita.com/KaitoMuraoka")
+                        .linkStyle(.button)
+                }
+            }
+            .backgroundOpacity(0.2)
+
+            Slide(background: "/images/note-logo.png") {
+                Text("note")
+                    .font(.title2)
+
+                Text("I am posting here about non-technical matters.<br>技術以外のことはここに投稿しています。")
+                    .font(.lead)
+
+                Text {
+                    Link("Go note site", target: "https://note.com/ktombow1110")
+                        .linkStyle(.button)
+                }
+            }
+            .backgroundOpacity(0.2)
+        }
 
 //
 //        List {
@@ -202,6 +290,7 @@ struct Home: StaticPage {
         Group {
             Text("About me")
                 .font(.title1)
+                .padding(.bottom, 20)
                 .horizontalAlignment(.center)
 
             Section {
@@ -209,30 +298,32 @@ struct Home: StaticPage {
                     Text("I live in Minato-ku, Tokyo🗼")
                     Text("From Chigasaki, Kanagawa🌊")
                     Text("🎓Department of Physics, Faculty of Science, Tokai University <br> (東海大学 理学部 物理学科)")
-                    Text("")
                 } header: { "Basic Info" }.horizontalAlignment(.center)
 
                 Card {
-                    Text("Swift: 2023/4 - Current")
-                    Text("Kotlin: 2023/4 - Current")
-                    Text("Java: 2023/4 - Current")
-                } header: { "Programing Language Skill" }.horizontalAlignment(.center)
+                    Text {
+                        Link("どすこい塾", target: "https://dosukoi-juku.github.io/DosukoiWebSite/")
+                            .role(.dark)
+                    }
+                    
+                    Text{
+                        Link("iOS Osushi", target: "https://ios-osushi.github.io/")
+                            .role(.dark)
+                    }
+                } header: { "My current community" }.horizontalAlignment(.center)
 
                 Card {
-                    Text("Xcode, CocoaPods, Carthage, Swift Package Manager")
-                    Text("Firebase(Hosting, Crashlytics, RemoteConfig)")
-                    Text("AndroidStudio, Android View")
-                } header: {
-                    "Tool Skill"
-                }.horizontalAlignment(.center)
+                    Text("iOS(Swift): 2023/4 - Current")
+                    Text("Android(Kotlin, Java): 2023/4 - Current")
+                    Text("OSS Activities: 2023/7 - Current")
+                    Link("At Coder", target: "https://atcoder.jp/users/Ktombow1110").role(.secondary)
+                } header: { "Skill" }.horizontalAlignment(.center)
                 
                 Card {
                     Text("iOS 新卒研修・教育")
-                    Text("社内イベントの提案・企画・運営")
+                    Text("社内勉強会の提案・企画・運営")
                     Text("技術イベント(LT会も含む)の登壇")
-                } header: {
-                    "Other Skill"
-                }.horizontalAlignment(.center)
+                } header: { "Other Skill" }.horizontalAlignment(.center)
             }.columns(2)
         }
     }
