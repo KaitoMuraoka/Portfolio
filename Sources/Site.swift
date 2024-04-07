@@ -17,7 +17,7 @@ struct IgniteWebsite {
 struct ExampleSite: Site {    
     var name = "とんとんぼ Site"
     var baseTitle = " – とんとんぼ Site"
-    var url = URL("https://www.yoursite.com")
+    var url = URL("https://portfolio-f6628.web.app")
 
     var language: Language = .japanese
     var builtInIconsEnabled = true
