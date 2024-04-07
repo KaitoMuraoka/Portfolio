@@ -18,7 +18,7 @@ struct ExampleSite: Site {
     var name = "とんとんぼ Site"
     var baseTitle = " – とんとんぼ Site"
     var url = URL("https://portfolio-f6628.web.app")
-
+    var favicon: URL? = URL(string: "https://portfolio-f6628.web.app/images/tonfly.png")
     var language: Language = .japanese
     var builtInIconsEnabled = true
     var syntaxHighlighters = [SyntaxHighlighter.swift, .python, .ruby]

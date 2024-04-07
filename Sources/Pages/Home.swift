@@ -40,7 +40,9 @@ struct Home: StaticPage {
             .padding(.top, 134)
         
         showContents()
-        
+            .horizontalAlignment(.center)
+            .padding(.top, 134)
+
         
     }
     private func showTopSection() -> BlockElement {
@@ -88,7 +90,6 @@ struct Home: StaticPage {
             Text("About me")
                 .font(.title1)
                 .padding(.bottom, 20)
-                .horizontalAlignment(.center)
             
             Section {
                 Card {
@@ -122,18 +123,17 @@ struct Home: StaticPage {
                     Text("技術イベント(LT会も含む)の登壇")
                 } header: { "Other Skill" }.horizontalAlignment(.center)
             }
-            .horizontalAlignment(.center)
             .columns(2)
         }
     }
     
     private func showContents() -> BlockElement {
-        Group {
+        let backgroundOpacityValue = 0.3
+        
+        return Group {
             Text("Contents")
                 .font(.title1)
-                .horizontalAlignment(.center)
                 .padding(.bottom, 20)
-                .padding(.top, 264)
             
             Carousel {
                 Slide(background: "/images/SNSIcons/GitHub_Logo_White.png") {
@@ -148,7 +148,7 @@ struct Home: StaticPage {
                             .linkStyle(.button)
                     }
                 }
-                .backgroundOpacity(0.2)
+                .backgroundOpacity(backgroundOpacityValue)
                 
                 Slide(background: "/images/SNSIcons/qiita-icon.png") {
                     Text("Qiita")
@@ -162,7 +162,7 @@ struct Home: StaticPage {
                             .linkStyle(.button)
                     }
                 }
-                .backgroundOpacity(0.2)
+                .backgroundOpacity(backgroundOpacityValue)
                 
                 Slide(background: "/images/note-logo.png") {
                     Text("note")
@@ -176,9 +176,8 @@ struct Home: StaticPage {
                             .linkStyle(.button)
                     }
                 }
-                .backgroundOpacity(0.2)
+                .backgroundOpacity(backgroundOpacityValue)
             }
-            .horizontalAlignment(.center)
         }
     }
 }
