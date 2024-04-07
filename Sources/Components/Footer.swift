@@ -14,6 +14,9 @@ struct Footer: Component {
                 Link("GitHub Repo", target: "https://github.com/KaitoMuraoka/Portfolio").role(.dark)
             }
             Text {
+                Link("RSS", target: "https://portfolio-f6628.web.app/feed.rss").role(.dark)
+            }
+            Text {
                 "This Site Created with "
                 Link("Ignite", target: URL("https://github.com/twostraws/Ignite")).role(.dark)
             }
