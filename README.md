@@ -1,5 +1,7 @@
 # とんとんぼ's Portfolio
 
+[Japanese](https://portfolio-f6628.web.app/article/portfolioReadme/)
+
 ## Overview
 This site is built with Swift and Ignite.
 [Ignite](https://github.com/twostraws/Ignite) is a tool for creating static sites with Swift, created by [Paul Hudson](https://github.com/twostraws).
