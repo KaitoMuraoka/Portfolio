@@ -12,11 +12,6 @@ import Ignite
 struct NavBar: Component {
     func body(context: PublishingContext) -> [any PageElement] {
         NavigationBar(logo: Text("Hello, Swift").font(.title1)) {
-
-//            Link("About", target: "#")
-//            Link("Experiense", target: "#")
-//            Link("Project", target: "#")
-
             Link("Created Product", target: ProductContent())
             Link("GitHub", target: "https://github.com/KaitoMuraoka")
             Link("X(Twitter)", target: "https://twitter.com/Ktombow1110")
