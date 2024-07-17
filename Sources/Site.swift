@@ -5,7 +5,6 @@ import Ignite
 struct IgniteWebsite {
     static func main() async {
         let site = ExampleSite()
-
         do {
             try await site.publish()
         } catch {
