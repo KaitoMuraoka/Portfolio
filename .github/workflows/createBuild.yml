@@ -1,0 +1,21 @@
+name: Create Build Directory
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: macos-13
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Select Xcode version # Xcode 15.2 を使う
+        run: sudo xcode-select -s '/Applications/Xcode_15.2.app/Contents/Developer'
+      - name: Show Xcode version
+        run: xcodebuild -version
+      - name: Show Xcode Version
+        run: xcodebuild -version
+      - name: Xcode Build
+        run: swift build -c release && .build/release/IgniteStarter
