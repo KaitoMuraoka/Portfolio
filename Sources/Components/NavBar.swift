@@ -17,7 +17,7 @@ struct NavBar: Component {
             Link("X(Twitter)", target: "https://twitter.com/Ktombow1110")
         }
         .navigationItemAlignment(.trailing)
-        .backgroundColor(.white)
+        .background(.white)
         .position(.fixedTop)
     }
 }
