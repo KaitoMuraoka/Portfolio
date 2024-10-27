@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:Portfolio}",
+            "name": "Debug IgniteStarter",
+            "program": "${workspaceFolder:Portfolio}/.build/debug/IgniteStarter",
+            "preLaunchTask": "swift: Build Debug IgniteStarter"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:Portfolio}",
+            "name": "Release IgniteStarter",
+            "program": "${workspaceFolder:Portfolio}/.build/release/IgniteStarter",
+            "preLaunchTask": "swift: Build Release IgniteStarter"
+        }
+    ]
+}

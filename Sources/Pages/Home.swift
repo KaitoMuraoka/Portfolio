@@ -31,6 +31,10 @@ struct Home: StaticPage {
         //"""
         //        Text(welcomeMessage).font(.body)
         
+        coffeeSectio()
+            .background(.skyBlue)
+            .padding(.top, 134)
+
         showTopSection()
             .horizontalAlignment(.center)
             .padding(.top, 134)
@@ -45,6 +49,12 @@ struct Home: StaticPage {
 
         
     }
+    private func coffeeSectio() -> BlockElement {
+        Section {
+            Include("coffee.html")
+        }
+    }
+    
     private func showTopSection() -> BlockElement {
         Section {
             Image("/images/tonfly.png", description: "This is My Icon!")

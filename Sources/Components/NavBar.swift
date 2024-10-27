@@ -11,13 +11,16 @@ import Ignite
 /// An example navigation bar, demonstrating how to create reusable components.
 struct NavBar: Component {
     func body(context: PublishingContext) -> [any PageElement] {
-        NavigationBar(logo: Text("Hello, Swift").font(.title1)) {
+        NavigationBar(logo: Text("とんとんぼ").foregroundStyle(.white)) {
             Link("Created Product", target: ProductContent())
+                .role(.light)
             Link("GitHub", target: "https://github.com/KaitoMuraoka")
+                .role(.light)
             Link("X(Twitter)", target: "https://twitter.com/Ktombow1110")
+                .role(.light)
         }
         .navigationItemAlignment(.trailing)
-        .background(.white)
+        .background(.skyBlue)
         .position(.fixedTop)
     }
 }
