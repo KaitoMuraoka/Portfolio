@@ -7,6 +7,20 @@ struct ProductContent: StaticPage {
     func body(context: PublishingContext) -> [BlockElement] {
         let ossContentTag = "contribute"
         let productContentTag = "product"
+        
+        Text("My Product")
+            .font(.title1)
+            .horizontalAlignment(.center)
+            .margin([.top, .bottom], 50)
+        
+        Section {
+            for item in context.content(tagged: productContentTag) {
+                ContentPreview(for: item)
+                    .width(3)
+                    .margin(.bottom)
+            }
+        }
+
         Text("The OSS project I contributed to")
             .font(.title1)
             .horizontalAlignment(.center)
@@ -20,19 +34,6 @@ struct ProductContent: StaticPage {
             }
         }
         .horizontalAlignment(.center)
-        
-        Text("Introducing the products I've created.")
-            .font(.title1)
-            .horizontalAlignment(.center)
-            .margin([.top, .bottom], 50)
-        
-        Section {
-            for item in context.content(tagged: productContentTag) {
-                ContentPreview(for: item)
-                    .width(3)
-                    .margin(.bottom)
-            }
-        }
         
         Text("Content's Tags")
             .font(.title3)
